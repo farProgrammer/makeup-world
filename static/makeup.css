@@ -1,0 +1,31 @@
+h1, h2 {
+    margin: 1em 0;
+  }
+  
+  .form-control li {
+    list-style-type: none;
+  }
+  nav{
+      
+    background-image: url(https://st3.depositphotos.com/1008657/19511/i/1600/depositphotos_195119560-stock-photo-makeup-brush-and-decorative-cosmetics.jpg);
+  }
+  
+  .pets-listing {
+    margin-bottom: 2em;
+  }
+  body{
+    background-color: goldenrod;
+    background-image: url(https://png.pngtree.com/back_origin_pic/05/08/54/22c482ecfeff7f1372819eb7acf08ecc.jpg);
+    
+background-size: cover;
+ 
+
+}
+b{
+  text-align: center;
+  color:indigo;
+
+}
+
+  
+  

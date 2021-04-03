@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Our Products</h1>
+
+<div class="row products-listing">
+
+  {% for product in products %}
+  <div class="col-3">
+    <img class="img-thumbnail" src="{{ product.image_url() }}">
+    <a href="{{ url_for('edit_product', product_id=product.id) }}">{{ product.name }}</a>
+    {% if product.available %} <b> is available!</b> {% endif %}
+  </div>
+  {% else %}
+  <div class="col-12">No product yet.</div>
+  {% endfor %}
+
+</div>
+
+<a class="btn btn-primary" href="{{ url_for('add_product') }}">Add a Product</a>
+
+{% endblock %}
