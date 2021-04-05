@@ -25,6 +25,7 @@ Flask-SQLAlchemy==2.4.4
 Flask-WTF==0.14.3
 forex-python==1.5
 futures==3.1.1
+greenlet==1.0.0
 gunicorn==19.6.0
 idna==2.10
 ipython==7.19.0
@@ -40,6 +41,7 @@ mccabe==0.6.1
 parso==0.8.1
 pickleshare==0.7.5
 prompt-toolkit==3.0.10
+psycopg2==2.8.6
 psycopg2-binary==2.8.6
 pycparser==2.20
 Pygments==2.7.3
