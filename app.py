@@ -11,11 +11,7 @@ from sqlalchemy.exc import IntegrityError
 import requests
 import os
 
-API_SECRET_KEY = os.environ.get('API_SECRET_KEY')
 
-CURR_USER_KEY = "curr_user"
-
-API_BASE_URL = "http://makeup-api.herokuapp.com/"
 
 
 app = Flask(__name__)
