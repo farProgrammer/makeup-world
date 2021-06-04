@@ -8,8 +8,10 @@ from  models import  db, connect_db, Product
 from  forms import AddProductForm, EditProductForm
 from sqlalchemy import func
 from sqlalchemy.exc import IntegrityError
+import logging
 import requests
 import os
+
 
 
 
@@ -44,6 +46,21 @@ def list_products():
 
     products = Product.query.all()
     return render_template("product_list.html",products=products)
+
+
+
+@app.route("String:/<product_brand>",methods=["GET","POST"])
+def List_product_by_brand(product_brand):
+    """List product_brand."""
+    response = requests.get('http://makeup-api.herokuapp.com/api/v1/products.json?brand={product_brand}')
+    logging.info("this is a response:")
+    logging.info(response.text)
+    print(response)
+
+    product_brand = product_brand.query.all()
+    product_brands= []
+    return render_template("product_brand.html",product_brand=product_brand)
+
 
 @app.route("/add",methods=["GET","POST"])  
 def add_product():

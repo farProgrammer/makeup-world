@@ -14,7 +14,8 @@ class AddProductForm(FlaskForm):
 
     name = SelectField(
        "Product",
-        choices=[("Mascara","mascara"),("Lipstick","lipstick"),("Foundation","foundation"),("NailColor","nailcolor")],
+         choices=[("Mascara","mascara"),("Lipstick","lipstick"),("Foundation","foundation"),("NailColor","nailcolor")],
+        
     )
 
     photo_url = StringField(
