@@ -49,7 +49,7 @@ def list_products():
 
 
 
-@app.route("String:/<product_brand>",methods=["GET","POST"])
+@app.route("search/<product_brand>",methods=["GET","POST"])
 def List_product_by_brand(product_brand):
     """List product_brand."""
     response = requests.get('http://makeup-api.herokuapp.com/api/v1/products.json?brand={product_brand}')
