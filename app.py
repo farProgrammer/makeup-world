@@ -49,17 +49,12 @@ def list_products():
 
 
 
-@app.route("search/<product_brand>",methods=["GET","POST"])
+@app.route("/search/<product_brand>",methods=["GET","POST"])
 def List_product_by_brand(product_brand):
     """List product_brand."""
-    response = requests.get('http://makeup-api.herokuapp.com/api/v1/products.json?brand={product_brand}')
-    logging.info("this is a response:")
-    logging.info(response.text)
-    print(response)
-
-    product_brand = product_brand.query.all()
-    product_brands= []
-    return render_template("product_brand.html",product_brand=product_brand)
+    res = requests.get('http://makeup-api.herokuapp.com/api/v1/products.json?brand={product_brand}')
+   
+    return render_template("product_brand.html",res=res)
 
 
 @app.route("/add",methods=["GET","POST"])  
