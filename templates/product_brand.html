@@ -1,12 +1,14 @@
-{% extends 'base.html' %}
-
-{% block content %}
-
-    <title>Product Brand</title>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCT-BRAND</title>
 </head>
 <body>
-  <h1><b> Detail About Product Brand :</b> </h>
-  {{ res.text }}
+    <h1><b>Product By Brand Details:</b></h1>
+    {{ res.json() }}
     
-{% endblock %}
+</body>
+</html>
