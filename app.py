@@ -3,6 +3,7 @@
 from flask import Flask, url_for, render_template, redirect, flash, jsonify
 
 from  flask_debugtoolbar import  DebugToolbarExtension
+from  flask_wtf import FlaskForm
 
 from  models import  db, connect_db, Product
 from  forms import AddProductForm, EditProductForm
@@ -32,13 +33,6 @@ toolbar = DebugToolbarExtension(app)
 connect_db(app)
 db.create_all()
 
-# ******************************
-
-
-
-
-
-
 
 @app.route("/")
 def list_products():
@@ -52,10 +46,9 @@ def list_products():
 @app.route("/search/<product_brand>",methods=["GET","POST"])
 def List_product_by_brand(product_brand):
     """List product_brand."""
-    res=requests.get(f 'http://makeup-api.herokuapp.com/api/v1/products.json?brand={product_brand}')
-   
-    return render_template("product_brand.html",res=res)
+    res= requests.get(f'http://makeup-api.herokuapp.com/api/v1/products.json?brand={product_brand}')
 
+    return render_template("product_brand.html",res=res)
 
 @app.route("/add",methods=["GET","POST"])  
 def add_product():
