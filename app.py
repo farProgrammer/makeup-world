@@ -47,8 +47,19 @@ def list_products():
 def List_product_by_brand(product_brand):
     """List product_brand."""
     res= requests.get(f'http://makeup-api.herokuapp.com/api/v1/products.json?brand={product_brand}')
+    
 
     return render_template("product_brand.html",res=res)
+
+@app.route("/buy_product")
+def buy_product():
+    """Buy a Product"""
+    return render_template("buy_product.html")
+
+
+
+    
+
 
 @app.route("/add",methods=["GET","POST"])  
 def add_product():
