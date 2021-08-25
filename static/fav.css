@@ -1,0 +1,171 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+      color: #555;
+      font-family: 'Raleway', 'Arial', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      text-rendering: optimizeLegibility;
+      }
+  
+  
+  
+  h1 {
+      font-family: Impact, Arial, sans-serif;
+      -webkit-text-stroke-width: 1.5px;
+     -webkit-text-stroke-color: brown;
+     font-size: 320%;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     
+  }
+  
+  h2 {font-family: Tahoma, Arial, sans-serif;
+                color:indigo;}
+  
+  
+  .background-color,
+  .meme-gallery {
+      background-color: lightseagreen;
+      padding: 1%;
+
+  }
+  
+  
+  .title {width: 900px;
+     text-decoration:    green underline;}
+  
+  
+  
+  .gallery {
+      list-style: none;
+      width: 100%;
+  }
+  
+  .meme-img{
+      display: inline-block;
+      margin: 1%;
+      width: 600px;
+      height: auto;
+      text-align: center;
+      position: relative;
+      opacity: 1;
+      
+  }
+  
+  img {width: 500px;}
+  
+  .meme-img:hover {opacity: 0.6;
+background-color:midnightblue;}
+  
+  .red-cross {
+      width: 500px;
+      height: 250px;
+      content: "X";
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%, -66%);
+      font-weight: 700;
+      text-align: center;
+      font-size: 1500%;
+      opacity: 0;
+  }
+  
+  .red-cross:hover {
+      opacity: 1.6;
+      z-index: 20;
+  }
+  
+  .text {
+      font-family: Impact, Arial, sans-serif;
+      width: 500px;
+      font-size: 250%;
+      line-height: 1.1em;
+      letter-spacing: 1.5px;
+      color: orangered;
+     -webkit-text-fill-color: goldenrod; 
+     -webkit-text-stroke-width: 1.7px;
+     -webkit-text-stroke-color:orangered;
+     text-transform: uppercase;
+     overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    opacity: 1;
+    text-decoration: purple underline;
+  }
+  
+  .text:hover {opacity: 0.6;}
+  
+  .top {
+      position: absolute;
+      top: 0;
+      z-index: 9;
+      max-height: 50%;
+  }
+  
+  .bottom {
+      position: absolute;
+      bottom: 0;
+      z-index: 9;
+      max-height: 50%;
+  }
+  
+  
+  
+  footer {
+      background-color: lightcoral;
+      padding: 20px;
+      font-size: 80%;
+      text-align: center;
+      border-top: 1px solid lightslategray;
+      color:maroon;
+      text-decoration: midnightblue  underline  ;
+  }
+  
+  .footer p {font-family: Impact, Arial, sans-serif;
+  text-transform: uppercase;}
+  
+  
+  
+  
+  @media only screen and (max-width: 1200px) {
+  
+  
+  }
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 1023px) {
+  
+  
+  }
+  
+  
+  @media only screen and (max-width: 767px) {
+      .title {width: 85%;}
+      h1{font-size: 280%;}
+      h2 {font-size: 190%;}
+  }
+  
+  
+  @media only screen and (max-width: 480px) {
+  h1{font-size: 250%;}
+  h2 {font-size: 110%;}
+  html{font-size: 90%;}
+  
+  img,
+  .meme-img,
+  .red-cross,
+  .text {width: 350px;}
+  
+  .text {font-size: 160%;
+}
+  }
