@@ -29,7 +29,7 @@ API_BASE_URL = "http://makeup-api.herokuapp.com/"
 app = Flask(__name__)
 
 UPLOAD_FOLDER='static/uploads/'
-
+file='static/uploads/i.jpeg'
 # app.config['SECRET_KEY'] = "abcdef"
 Bootstrap(app)
 
