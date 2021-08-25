@@ -24,3 +24,18 @@ VALUES
 ('lipstick','Mac','https://belk.scene7.com/is/image/Belk?layer=0&src=5900090_SK6M_A_500&$DWP_PRODUCT_PDP_LARGE$',24,'long lasting adorable color','t'),
 ( 'foundation','Covergirl','https://cdn11.bigcommerce.com/s-z4n81jv/images/stencil/1280x1280/attribute_rule_images/40128_source_1536178554.jpg',11,' smooth skin ,stays 24 hours full coverage for your face','t'),
 ('brushes', 'Dr.brushes',null,null,null,'t');
+
+
+
+
+Create TABLE
+CREATE TABLE users(
+	id serial PRIMARY KEY,
+	fullname VARCHAR ( 100 ) NOT NULL,
+	username VARCHAR ( 50 ) NOT NULL,
+	password VARCHAR ( 255 ) NOT NULL,
+	email VARCHAR ( 50 ) NOT NULL
+);
+
+
+
