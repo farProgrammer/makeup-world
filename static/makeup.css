@@ -15,7 +15,7 @@ h1, h2 {
   }
   body{
     background-color: goldenrod;
-    background-image: url(https://png.pngtree.com/back_origin_pic/05/08/54/22c482ecfeff7f1372819eb7acf08ecc.jpg);
+    background-image: url(http://makeup-api.herokuapp.com/assets/brushes-6d2ab84631ecd47ced4fa07c47eb37521eb61c5a525965dafaf308f21338aa44.png);
     
 background-size: cover;
  
@@ -27,5 +27,7 @@ b{
 
 }
 
+  
+  
   
   
