@@ -19,7 +19,7 @@ from werkzeug.utils import secure_filename
 from forms import AddProductForm, EditProductForm
 from models import  db, connect_db, Product,RegForm
 from flask_bootstrap import Bootstrap
-
+from google.colab import files
 
 CURR_USER_KEY = "curr_user"
 
