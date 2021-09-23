@@ -1,9 +1,41 @@
 """Forms for makeup app."""
 
 from  flask_wtf import  FlaskForm
-from  wtforms import  StringField,IntegerField,SelectField,TextAreaField,BooleanField
-from wtforms.validators import InputRequired,Length,NumberRange,URL,Optional
+from  wtforms import  StringField,IntegerField,SelectField,TextAreaField,BooleanField,PasswordField
+from wtforms.validators import InputRequired,Length,NumberRange,URL,Optional,DataRequired, Email
 
+
+
+class MessageForm(FlaskForm):
+    """Form for adding/editing messages."""
+
+    text = TextAreaField('text', validators=[DataRequired()])
+
+
+class UserAddForm(FlaskForm):
+    """Form for adding users."""
+
+    username = StringField('Username', validators=[DataRequired()])
+    email = StringField('E-mail', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[Length(min=6)])
+    image_url = StringField('(Optional) Image URL')
+
+
+class UserEditForm(FlaskForm):
+    """Form for editing user profile."""
+    username = StringField('Username', validators=[DataRequired()])
+    email = StringField('E-mail', validators=[DataRequired(), Email()])
+    password = PasswordField('Password')
+    header_image_url = StringField('(Optional) Header Image URL')
+    bio = TextAreaField('Bio')
+    image_url = StringField('(Optional) Image URL')
+
+
+class LoginForm(FlaskForm):
+    """Login form."""
+
+    username = StringField('Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[Length(min=6)])
 class AddProductForm(FlaskForm):
     """Form for adding products."""
 
@@ -14,7 +46,8 @@ class AddProductForm(FlaskForm):
 
     name = SelectField(
        "Product",
-        choices=[("Mascara","mascara"),("Lipstick","lipstick"),("Foundation","foundation"),("NailColor","nailcolor")],
+         choices=[("Mascara","mascara"),("Lipstick","lipstick"),("Foundation","foundation"),("NailColor","nailcolor")],
+        
     )
 
     photo_url = StringField(
