@@ -1,0 +1,23 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"> 
+    <title>Home</title>
+</head>
+<body bgcolor="teal">
+<br>
+<h1 align="center">Welcome {{name}} !</h1>
+
+</body>
+</html> -->
+
+
+
+{% extends 'base.html' %}
+  
+{% block title %}Home{% endblock %}
+  
+{% block content %}
+<h1 class="h2">Dashboard</h1>
+<p>Welcome back, {{ username }}!</p>
+{% endblock %}

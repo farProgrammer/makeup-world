@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add a Product</h1>
+
+<form method="POST">
+  {% include "_form.html" %}
+  <button class="btn btn-primary" type="submit">Add</button>
+  <a href="buy_product"><b class="btn btn-secondary">Go To Product</b></a>
+  <a href="/search/product_brand"><b class="btn btn-success">Product-Brand-List </b></a>
+ 
+</form>
+
+{% endblock %}

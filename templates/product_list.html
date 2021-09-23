@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<form action="process" method="post" action="/" enctype="multipart/form-data">
+<dl>
+  <label class="btn btn-warning" for="username">Please enter your name: </label>
+  <input type="text" id="username" name="username"><br>
+  <label class="btn btn-warning" for="password">Please enter your password: </label>
+  <input type="password" id="password" name="password"><br>
+  
+  
+
+
+  
+
+  
+    <p>
+      {%  with messages = get_flashed_messages() %}
+
+      {%  if messages  %}
+      <ul>
+        {% for message in messages %}
+        <li>
+          {{ message }}
+
+        </li>
+        {%  endfor %}
+
+      </ul>
+      {%  endif  %}
+      {%  endwith  %}
+    </p>
+    {%  if filename  %}
+    <div style="padding:20px;">
+    <img src="{{url_for('display_image',filename=filename)}}">
+    </div>
+    {%  endif  %}
+      
+    
+  
+  <p>
+    <input type="file" name="file" class ="form-control" autocomplete="off" required>
+  </p>
+</dl>
+<input type="submit" value="Submit" class="btn btn-info">
+  
+  <input  class="btn btn-primary"  type="submit" value="SEND">
+</form>
+
+
+<h1>Our Products</h1>
+
+
+<div class="row products-listing">
+
+  {% for product in products %}
+  <div class="col-3">
+    <img class="img-thumbnail" src="{{ product.image_url() }}">
+    <a href="{{ url_for('edit_product', product_id=product.id) }}">{{ product.name }}</a>
+    {% if product.available %} <b> is available!</b> {% endif %}
+  </div>
+  {% else %}
+  <div class="col-12">No product yet.</div>
+  {% endfor %}
+
+</div>
+
+
+<a class="btn btn-primary" href="{{ url_for('add_product') }}">Add a Product</a>
+
+<a href="buy_product"><b class="btn btn-secondary">Go To Product</b></a>
+<a href="/search/product_brand"><b class="btn btn-success">Product-Brand-List </b></a>
+
+
+{% endblock %}
