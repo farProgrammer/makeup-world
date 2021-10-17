@@ -1,11 +1,7 @@
 https://makeup-world.herokuapp.com/
 
 # Makeup
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 3b0218bf22d5bf8a6de0e72701bbc70ba96c1647
 ___Capstone 1 project for Makeup where you can select your brand and review it .
 
 ___this is a makeup website where you can select any makeup product url and  write your review for the selected product 
